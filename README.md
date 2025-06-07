@@ -9,6 +9,7 @@ This is a simple Spring Boot CRUD (Create, Read, Update, Delete) application tha
 ###  1. Pre-requisites Installed
 - Git
 - Java JDK (e.g., JDK 17)
+- Maven
 - IDE (e.g., IntelliJ IDEA or VS Code)
 - Database (e.g., PostgreSQL if used in project)
 ### 2. Clone the Project from GitHub
