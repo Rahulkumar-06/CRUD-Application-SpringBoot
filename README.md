@@ -15,7 +15,7 @@ This is a simple Spring Boot CRUD (Create, Read, Update, Delete) application tha
 ### 2. Clone the Project from GitHub
  Open Command Prompt or Terminal:
 
-    git clone https://github.com/username/project-name.git
+    https://github.com/Rahulkumar-06/Java-SpringBoot-JDBC-BackEnd-.git
 #### Replace username and project-name with the actual repository URL.
 Then:
   
