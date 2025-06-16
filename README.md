@@ -1,4 +1,4 @@
-# Java-SpringBoot-JDBC-BackEnd-
+# Spring Boot CRUD Application
 Java spring Boot BackEnd  for a JDBC using Jpa API 
 
 # Spring Boot CRUD Application
