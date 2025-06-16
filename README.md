@@ -1,7 +1,4 @@
 # Spring Boot CRUD Application
-Java spring Boot BackEnd  for a JDBC using Jpa API 
-
-# Spring Boot CRUD Application
 
 This is a simple Spring Boot CRUD (Create, Read, Update, Delete) application that uses Spring Data JPA and PostgreSQL. It demonstrates basic RESTful APIs with database operations.
 # Getting Started
