@@ -19,10 +19,6 @@ public class productcontroller {
     public void setService(productservice service) {
         this.service = service;
     }
-    @Autowired      //Setter Injection
-    public void setProducts(Products products) {
-        this.products = products;
-    }
 
     @PostMapping("/product")                            //CREATE
     public void Add_product(@RequestBody Products prods){
@@ -34,8 +30,8 @@ public class productcontroller {
         return service.getall();
     }
     @GetMapping("/product/{id}")
-    public ResponseEntity<Products> find_one(@PathVariable int id){
-        Products product = service.find1(id);
+    public ResponseEntity<Products> findone(@PathVariable int id){
+        Products product = service.findone(id);
         if(product != null){
            return new ResponseEntity<>(product, HttpStatus.OK);
         }else {

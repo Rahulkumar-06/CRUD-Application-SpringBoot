@@ -4,12 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import org.springframework.stereotype.Component;
+
 
 import java.math.BigDecimal;
 
-@Component
-@Entity
+@Entity (name = "Products")
 public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

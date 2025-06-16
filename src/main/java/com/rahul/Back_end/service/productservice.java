@@ -3,7 +3,6 @@ package com.rahul.Back_end.service;
 import com.rahul.Back_end.model.Products;
 import com.rahul.Back_end.repositry.Productrepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -16,10 +15,7 @@ public class productservice {
     public void setRepo(Productrepo repo) {
         this.repo = repo;
     }
-    @Autowired
-    public void setProducts(Products products) {
-        this.products = products;
-    }
+
 
     public List<Products> getall() {
         return repo.findAll();
@@ -49,7 +45,7 @@ public class productservice {
         repo.deleteById(id);
     }
 
-    public Products find1(int id) {
+    public Products findone(int id) {
          return repo.findById(id).orElse(new Products());
     }
 }

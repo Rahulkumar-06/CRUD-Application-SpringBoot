@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.rahul</groupId>
-	<artifactId>Back-end</artifactId>
+	<artifactId>JavaSpringBootJDBC</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Back-end</name>
+	<name>CRUD</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
