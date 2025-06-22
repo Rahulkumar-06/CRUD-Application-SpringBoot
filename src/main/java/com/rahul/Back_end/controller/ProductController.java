@@ -11,9 +11,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-public class productcontroller {
+public class ProductController {
     productservice service;
-    Products products;
 
     @Autowired      //Setter Injection
     public void setService(productservice service) {
@@ -21,16 +20,18 @@ public class productcontroller {
     }
 
     @PostMapping("/product")                            //CREATE
-    public void Add_product(@RequestBody Products prods){
+    public ResponseEntity<String> AddProduct(@RequestBody Products prods){
         service.post(prods);
+        return ResponseEntity.accepted().body("Successfully Saved");
     }
 
     @GetMapping("/products")                            //READ
-    public List<Products> get_all(){
-        return service.getall();
+    public ResponseEntity<List<Products>> getAll(){
+         List<Products> prod = service.getall();
+         return ResponseEntity.ok(prod);
     }
     @GetMapping("/product/{id}")
-    public ResponseEntity<Products> findone(@PathVariable int id){
+    public ResponseEntity<Products> FindOne(@PathVariable int id){
         Products product = service.findone(id);
         if(product != null){
            return new ResponseEntity<>(product, HttpStatus.OK);
@@ -40,11 +41,13 @@ public class productcontroller {
     }
 
     @PutMapping("/product/{id}")                        //UPDATE
-    public void Update(@PathVariable int id,@RequestBody Products prod){
+    public ResponseEntity<String> Update(@PathVariable int id,@RequestBody Products prod){
         service.update(id,prod);
+        return ResponseEntity.ok("Successfully Updated Product");
     }
     @DeleteMapping("/del/{id}")                         //DELETE
-    public void Delete(@PathVariable int id){
+    public ResponseEntity<String> Delete(@PathVariable int id){
         service.deleteprod(id);
+        return ResponseEntity.ok("Product Is Deleted");
     }
 }
